@@ -23,7 +23,7 @@ export default function Dashboard() {
     <div className="p-8 text-white">
       <h1 className="text-2xl font-bold mb-4">Your Top Tracks</h1>
       <ul>
-        {tracks.map((t: any) => (
+        {tracks.map((t: { id: string; name: string; artists: { name: string }[] }) => (
           <li key={t.id}>{t.name} — {t.artists[0].name}</li>
         ))}
       </ul>
